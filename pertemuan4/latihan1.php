@@ -1,45 +1,25 @@
 <?php
-#Struktur kendali
-#Perulangan
-#for
-/*for($i = 0; $i<7;$i++){
-    echo "Hello world!<br>";
-}
- */
+#Bulit in function
+#date()
+#echo date("l, d M Y");
 
-#while
-/*$i = 0
-while($i < 7){
-    echo "Hello world!<br>";
-    $i++;
-}*/
+#time()
+#UNIX time stamp / EPOCH time
+#detik yang sudah berlalu sejak 1 jan 1970
+#echo date("l, d M Y", time()+3600*5*24);
+#artinya 5 hari setelahnya
 
-# do .. while
-/*$i = 0
-do {
-    echo "Hello world! <br>";
-    $i++;
-}while($i < 10)
-*/
+#mktime()
+#mambuat sentidri detiknya
+#mktime(0, 0, 0, 0, 0, 0)
+#Jam, Menit, Detik, Bulan, Tanggal, Tahun
+#echo mktime(0,0,0,7, 23, 2003);
+#echo date("l, d M Y", mktime(0,0,0, 7, 23, 2003));
 
-#Pengkondisian
-/*
-$x = 30;
-if($x < 20){
-    echo "Benar";
-}else{
-    echo "Salah";
-}
-*/
-
-$x = 20;
-if($x < 20){echo "<h1>Benar</h1>";}
-else if($x == 20 ){echo "<h1>Binggo</h1>";}
-else{echo "<h1>Salah</h1>";}
+#strtotime()
+echo strtotime("24 mar 2018");
 
 
 
 
-
-
-
+?>
