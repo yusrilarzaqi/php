@@ -2,16 +2,19 @@
 // Super Globals
 // $_GET
 $mahasiswa = [
-  ["nama" => "Yusril arzaqi",
-    "nis" => "185512",
-    "email" => "arzaqiyusril@gmail.com",
-    "jurusan" => "Tehnik komputer jaringan",
-    "gambar" => "img/5.jpg"],
-  ["nama" => "Adam Saputra",
-    "nis" => "185712",
-    "email" => "adam145@gmail.com",
-    "jurusan" => "Tehnik komputer jaringan",
-    "gambar" => "img/6.jpg"]
+    [
+        "nama" => "Yusril arzaqi",
+        "nis" => "185512",
+        "email" => "arzaqiyusril@gmail.com",
+        "jurusan" => "Tehnik komputer jaringan",
+        "gambar" => "img/5.jpg"
+    ],[
+        "nama" => "Adam Saputra",
+        "nis" => "185712",
+        "email" => "adam145@gmail.com",
+        "jurusan" => "Tehnik komputer jaringan",
+        "gambar" => "img/6.jpg"
+    ]
   ];
 ?>
 <!DOCTYPE html>

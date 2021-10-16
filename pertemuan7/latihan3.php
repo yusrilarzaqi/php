@@ -13,7 +13,5 @@
     <br>
     <button type="submit" name="submit">Kirim</button>
   </form>
-  
-  
-</body>
+ </body>
 </html>
