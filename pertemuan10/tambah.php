@@ -16,7 +16,7 @@ if(isset($_POST["sumbit"])) {
   mysqli_query($conn, $query);
 
   // check apakah data berhasil ditambahkan tau tidak
-  var_dump(mysqli_affected_rows($conn))
+  var_dump(mysqli_affected_rows($conn));
 
 }
 ?>
