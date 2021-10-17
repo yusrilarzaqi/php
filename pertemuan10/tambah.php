@@ -1,33 +1,16 @@
 <?php
-<<<<<<< HEAD
 $conn = mysqli_connect("localhost", "u0_a430", "", "phpdasar");
-
-if ( isset($_POST["submit"])) {
-  
-=======
-
-// koneksi ke database 
-$conn = mysqli_connect("localhost", "u0_a430", "", "phpdasar");
-
 
 // check apakah tombol sumbit sudah ditekan atau belum 
 if(isset($_POST["sumbit"])) {
 
   // mengambil isi query
->>>>>>> f737312b47d9dc4e2840deb4f812f628c55b4931
   $nrp = $_POST["nrp"];
   $nama = $_POST["nama"];
   $email = $_POST["email"];
   $jurusan = $_POST["jurusan"];
   $gambar = $_POST["gambar"];
-<<<<<<< HEAD
   
-}
-?>
-
-
-=======
-
   // query insert
   $query = "INSERT INTO mahasiswa VALUES 
             ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')          
@@ -36,7 +19,6 @@ if(isset($_POST["sumbit"])) {
 
 }
 ?>
->>>>>>> f737312b47d9dc4e2840deb4f812f628c55b4931
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,11 +55,7 @@ if(isset($_POST["sumbit"])) {
         <input type="text" name="gambar" id="gambar">
       </li>
       <li>
-<<<<<<< HEAD
         <button type="submit" name="submit">Kirim</button>
-=======
-        <button type="submit" name="submit">Kirim !</button>
->>>>>>> f737312b47d9dc4e2840deb4f812f628c55b4931
       </li>
     </ul>
   </form>
