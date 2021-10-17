@@ -12,10 +12,11 @@ if(isset($_POST["sumbit"])) {
   $gambar = $_POST["gambar"];
   
   // query insert
-  $query = "INSERT INTO mahasiswa VALUES 
-            ('', '$nrp', '$nama', '$email', '$jurusan', '$gambar')          
-  ";
+  $query = "INSERT INTO mahasiswa VALUES ('8', '$nrp', '$nama', '$email', '$jurusan', '$gambar')";
   mysqli_query($conn, $query);
+
+  // check apakah data berhasil ditambahkan tau tidak
+  var_dump(mysqli_affected_rows($conn))
 
 }
 ?>
