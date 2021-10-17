@@ -1,7 +1,8 @@
 <?php
 if (isset($_POST["submit"])) {
   if ($_POST["username"] == "admin" && $_POST["password"] == "123" ) {
-    header("Location: admin.php");
+    // header("Location: admin.php");
+    var_dump($_POST);
     exit;
   }else {
     $error = true;
