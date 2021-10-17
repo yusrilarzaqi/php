@@ -1,3 +1,18 @@
+<?php
+$conn = mysqli_connect("localhost", "u0_a430", "", "phpdasar");
+
+if ( isset($_POST["submit"])) {
+  
+  $nrp = $_POST["nrp"];
+  $nama = $_POST["nama"];
+  $email = $_POST["email"];
+  $jurusan = $_POST["jurusan"];
+  $gambar = $_POST["gambar"];
+  
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,9 +48,9 @@
         <label for="gambar">Gambar : </label>
         <input type="text" name="gambar" id="gambar">
       </li>
-
-
-
+      <li>
+        <button type="submit" name="submit">Kirim</button>
+      </li>
     </ul>
   </form>
   
