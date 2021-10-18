@@ -7,7 +7,12 @@ if(isset($_POST["submit"])) {
 
   // jika data berhasil dimasukan ke database
   if( tambah($_POST) > 0 ) {
-    echo "data berhasil ditambahkan";
+    echo "
+      <script>
+        alert('data berhasil ditambahkan !');
+        document.location.href = 'index.php';
+      </script>
+    ";
   }else{
     echo "data tidak berhasil ditambahkan";
   }
@@ -29,24 +34,24 @@ if(isset($_POST["submit"])) {
     <ul>
       <li>
         <label for="nrp">NRP : </label>
-        <input type="text" name="nrp" id="nrp">
+        <input type="text" name="nrp" id="nrp" required>
       </li>
       <li>
         <label for="nama">Nama : </label>
-        <input type="text" name="nama" id="nama">
+        <input type="text" name="nama" id="nama" required>
         <br>
       </li>
       <li>
         <label for="email">Email : </label>
-        <input type="text" name="email" id="email">
+        <input type="text" name="email" id="email" required>
       </li>
       <li>
         <label for="jurusan">Jurusan : </label>
-        <input type="text" name="jurusan" id="jurusan">
+        <input type="text" name="jurusan" id="jurusan" required>
       </li>
       <li>
         <label for="gambar">Gambar : </label>
-        <input type="text" name="gambar" id="gambar">
+        <input type="text" name="gambar" id="gambar" required>
       </li>
       <li>
         <button type="submit" name="submit">Kirim</button>

@@ -16,11 +16,11 @@ function query( $query ){
 
 function tambah($data) {
   global $conn;
-  $nrp = $data["nrp"];
-  $nama = $data["nama"];
-  $email = $data["email"];
-  $jurusan = $data["jurusan"];
-  $gambar = $data["gambar"];
+  $nrp = htmlspecialchars($data["nrp"]);
+  $nama = htmlspecialchars($data["nama"]);
+  $email = htmlspecialchars($data["email"]);
+  $jurusan = htmlspecialchars($data["jurusan"]);
+  $gambar = htmlspecialchars($data["gambar"]);
 
   // query insert
   $query = "INSERT INTO mahasiswa VALUES ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')";
@@ -29,5 +29,10 @@ function tambah($data) {
   return mysqli_affected_rows($conn);
 }
 
+function hapus($id){
+  global $conn;
+  mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+  return mysqli_affected_rows($conn);
+}
 
 ?>
