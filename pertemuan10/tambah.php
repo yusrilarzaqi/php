@@ -1,23 +1,16 @@
 <?php
-$conn = mysqli_connect("localhost", "u0_a430", "", "phpdasar");
+// import file fuctions.php
+require "functions.php";
 
-// check apakah tombol sumbit sudah ditekan atau belum 
-if(isset($_POST["sumbit"])) {
+// check apakah tombol submit sudah ditekan atau belum 
+if(isset($_POST["submit"])) {
 
-  // mengambil isi query
-  $nrp = $_POST["nrp"];
-  $nama = $_POST["nama"];
-  $email = $_POST["email"];
-  $jurusan = $_POST["jurusan"];
-  $gambar = $_POST["gambar"];
-  
-  // query insert
-  $query = "INSERT INTO mahasiswa VALUES ('8', '$nrp', '$nama', '$email', '$jurusan', '$gambar')";
-  mysqli_query($conn, $query);
-
-  // check apakah data berhasil ditambahkan tau tidak
-  var_dump(mysqli_affected_rows($conn));
-
+  // jika data berhasil dimasukan ke database
+  if( tambah($_POST) > 0 ) {
+    echo "data berhasil ditambahkan";
+  }else{
+    echo "data tidak berhasil ditambahkan";
+  }
 }
 ?>
 <!DOCTYPE html>

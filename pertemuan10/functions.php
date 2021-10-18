@@ -1,6 +1,6 @@
 <?php
 // connect mysql
-$conn = mysqli_connect("localhost", "u0_a430", "", "phpdasar");
+$conn = mysqli_connect("localhost", "root", "", "phpdasar");
 
 function query( $query ){
   global $conn;
@@ -11,4 +11,23 @@ function query( $query ){
   }
   return $rows;
 }
+
+
+
+function tambah($data) {
+  global $conn;
+  $nrp = $data["nrp"];
+  $nama = $data["nama"];
+  $email = $data["email"];
+  $jurusan = $data["jurusan"];
+  $gambar = $data["gambar"];
+
+  // query insert
+  $query = "INSERT INTO mahasiswa VALUES ('', '$nama', '$nrp', '$email', '$jurusan', '$gambar')";
+  mysqli_query($conn, $query);
+
+  return mysqli_affected_rows($conn);
+}
+
+
 ?>
